@@ -1,11 +1,13 @@
-const UserProfile = (props) => {
+function UserProfile(props) {
+   console.log("UserProfile props:", props);
+
    return (
      <div>
-       <h2>Abdulmalik Abdullah</h2>
-       <p>Age: 22</p>
-       <p>Bio: An aspiring software developer</p>
+       <h2>{props.name}</h2>
+       <p>Age: {props.age}</p>
+       <p>Bio: {props.bio}</p>
      </div>
    );
- };
+ }
 
  export default UserProfile;

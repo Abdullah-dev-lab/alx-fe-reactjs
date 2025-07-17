@@ -17,7 +17,7 @@ function App() {
         <WelcomeMessage />
         <Header />
         <MainContent />
-        <UserProfile />
+        <UserProfile name="Abdulmalik Abdullah" age={22} bio="An aspiring software developer" />
         <Footer />
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
