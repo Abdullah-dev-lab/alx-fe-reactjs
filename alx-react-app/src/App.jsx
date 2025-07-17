@@ -1,5 +1,5 @@
 import WelcomeMessage from './src/components/WelcomeMessage'
-import header from './src/components/Header'
+import Header from './src/components/Header'
 import MainContent from './src/components/MainContent'
 import Footer from './src/components/Footer'
 import { useState } from 'react'
