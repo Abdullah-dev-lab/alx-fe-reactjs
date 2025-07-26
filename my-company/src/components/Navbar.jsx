@@ -13,6 +13,7 @@ const Navbar = () => {
         zIndex: 1000, }}>
             <ul style={{
           listStyle: 'none',
+          justifyContent: 'space-evenly',
           display: 'flex',
           gap: '20px',
           margin: 0,
