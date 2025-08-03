@@ -3,6 +3,8 @@ import './App.css'
 import { useRecipeStore } from './components/recipeStore';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import EditRecipeForm from './components/EditRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
@@ -18,6 +20,8 @@ function App() {
       <h1>My Recipe App</h1>
       <AddRecipeForm onAddRecipe={addRecipe} />
       <RecipeList recipes={recipes} />
+      <FavoritesList />
+      <RecommendationsList />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<RecipeList recipes={recipes} />} />
