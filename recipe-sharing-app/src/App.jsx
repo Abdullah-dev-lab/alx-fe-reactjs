@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import { useRecipeStore } from './components/recipeStore';
-import RecipeList from './components/RecipeList';
+import { useRecipeStore } from './recipeStore';
+import RecipeList from './RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import EditRecipeForm from './components/EditRecipeForm';

@@ -1,10 +1,10 @@
-import { useRecipeStore } from './recipeStore';
+import { useRecipeStore } from './components/recipeStore';
 import { Link } from 'react-router-dom';
-import DeleteRecipeButton from './DeleteRecipeButton';
-import SearchBar from './SearchBar';
+import DeleteRecipeButton from './components/DeleteRecipeButton';
+import SearchBar from './components/SearchBar';
 
 function RecipeList() {
-  const filteredRecipes = useRecipeStore(state => state.recipes);
+  const filteredRecipes = useRecipeStore((state) => state.filteredRecipes());
  
   return (
    <div>
