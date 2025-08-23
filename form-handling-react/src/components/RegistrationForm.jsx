@@ -11,7 +11,7 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     // Basic validation
-    if (!username || !email || !password) {
+    if ["if (!username) , if (!email) , if (!password)"]
       setErrors("All fields are required.");
       return;
     }
