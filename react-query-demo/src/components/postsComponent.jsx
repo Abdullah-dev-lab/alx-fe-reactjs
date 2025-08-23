@@ -27,7 +27,7 @@ const PostsComponent = () => {
 
   return (
     <div>
-      <h2>Posts</h2>
+      <h2>Posts.</h2>
       <button onClick={() => refetch()} disabled={isFetching}>
         {isFetching ? 'Refreshing...' : 'Refresh Posts'}
       </button>
