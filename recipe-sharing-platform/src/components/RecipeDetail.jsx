@@ -16,7 +16,7 @@ const RecipeDetail = () => {
   }
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container  mx-auto p-6">
       {/* Title */}
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
         {recipe.title}
