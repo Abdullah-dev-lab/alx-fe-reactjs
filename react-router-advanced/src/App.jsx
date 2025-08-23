@@ -23,7 +23,7 @@ function App() {
         />
 
         {/* Dynamic Route */}
-        <Route path="/posts/:postId" element={<BlogPost />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );
