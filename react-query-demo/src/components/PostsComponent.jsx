@@ -18,8 +18,10 @@ const PostsComponent = () => {
     refetch,
     isFetching,
   } = useQuery('posts', fetchPosts, {
-    staleTime: 5 * 60 * 1000, // 5 minutes caching for demonstration
-    cacheTime: 10 * 60 * 1000, // cache kept for 10 minutes
+    staleTime: 5 * 60 * 1000, 
+    cacheTime: 10 * 60 * 1000,
+     refetchOnWindowFocus: false,   
+     keepPreviousData: true     
   });
 
   if (isLoading) return <div>Loading posts...</div>;
