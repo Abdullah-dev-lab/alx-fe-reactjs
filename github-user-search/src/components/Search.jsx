@@ -9,6 +9,7 @@ function Search() {
     minFollowers: "",
   });
   const [results, setResults] = useState([]);
+  const [selectedUser, setSelectedUser] = useState(null);
   const [error, setError] = useState("");
   const [page, setPage] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
@@ -22,11 +23,20 @@ function Search() {
     try {
       setLoading(true);
       setError("");
+
+       if (form.username && !form.location && !form.minRepos && !form.minFollowers) {
+        const userData = await fetchUserData(form.username);
+        setResults([userData]);
+        setTotalCount(1);
+        return;
+      }
+
       const { users, totalCount } = await searchUsers({
         ...form,
         page: reset ? 1 : page,
         perPage: 10,
       });
+      
       setTotalCount(totalCount);
       if (reset) {
         setResults(users);
