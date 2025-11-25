@@ -11,7 +11,7 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     // Basic validation
-    if ["if (!username) , if (!email) , if (!password)"]
+    if (["if (!username) , if (!email) , if (!password)"])
       setErrors("All fields are required.");
       return;
     }
@@ -19,7 +19,6 @@ const RegistrationForm = () => {
     setErrors("");
     // For now just log form data
     console.log("Form submitted:", { username, email, password });
-  };
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded-2xl">

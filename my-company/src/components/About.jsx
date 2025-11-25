@@ -1,8 +1,7 @@
 import React from 'react';
 function About() {
   return (
-     <div style={{ color: "brown", border: "2px solid", padding: '20px' }}>
-         <h1>About Us</h1>
+     <div className=" min-h-screen pt-5 w-screen bg-[black] text-[white] p-6 mt-6">
          <p>Our company has been providing top-notch services since 1990. We specialize in various fields including technology, marketing, and consultancy.</p>
      </div>
   );

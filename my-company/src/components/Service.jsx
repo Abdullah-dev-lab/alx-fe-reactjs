@@ -1,8 +1,7 @@
 import React from 'react';
 function Services() {
      return (
-       <div style={{ color: "brown", border: "2px solid", padding: '20px' }}>
-         <h1>Our Services</h1>
+       <div className=" min-h-screen pt-5 w-screen bg-[black] text-[white] p-6 mt-6">
          <ul>
            <li>Technology Consulting</li>
            <li>Market Analysis</li>

@@ -2,11 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 
  function Contact() {
-  // State hooks for form inputs
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
      const [formData, setFormData] = useState({
        name: '',
        email: '',
@@ -23,33 +18,30 @@ import { useState } from 'react';
      };
 
      return (
-       <div style={{ color: "brown", border: "2px solid", padding: '20px' }}>
-         <h1>Contact Us</h1>
-         <form onSubmit={handleSubmit}>
-           <input
+       <div className="min-h-screen pt-5 w-screen bg-[black] text-[white] p-6 mt-6">
+         <h1 className="text-xl font-bold">Contact Us</h1>
+         <form class="flex flex-col space-y-4 w-64 mx-auto mt-8" onSubmit={handleSubmit}>
+            <input className="block my-[10px] text-black"
              type="text"
              name="name"
              placeholder="Your Name"
              value={formData.name}
              onChange={handleChange}
-             style={{ display: 'block', margin: '10px 0' }}
            />
-           <input
+           <input className="block my-[10px] text-black"
              type="email"
              name="email"
              placeholder="Your Email"
              value={formData.email}
              onChange={handleChange}
-             style={{ display: 'block', margin: '10px 0' }}
            />
-           <textarea
+           <textarea className="block my-[10px] text-black"
              name="message"
              placeholder="Your Message"
              value={formData.message}
              onChange={handleChange}
-             style={{ display: 'block', margin: '10px 0' }}
            />
-           <button style={{ backgroundColor: "brown", color: "white" }} type="submit">Send Message</button>
+           <button className="bg-white text-black font-bold rounded p-1 transition-all duration-200 hover:text-lg" type="submit">Send Message</button>
          </form>
        </div>
      );
